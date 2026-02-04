@@ -1,0 +1,8 @@
+export { HeroSection } from './HeroSection'
+export { CoupleSection } from './CoupleSection'
+export { EventSection } from './EventSection'
+export { LocationSection } from './LocationSection'
+export { GallerySection } from './GallerySection'
+export { GiftSection } from './GiftSection'
+export { RsvpSection } from './RsvpSection'
+export { WishesSection } from './WishesSection'
