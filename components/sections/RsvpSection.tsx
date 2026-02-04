@@ -37,7 +37,7 @@ export function RsvpSection() {
         setIsSubmitting(true)
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500))
-        console.log(data)
+        console.log("RSVP Data:", data)
         setIsSuccess(true)
         setIsSubmitting(false)
     }
