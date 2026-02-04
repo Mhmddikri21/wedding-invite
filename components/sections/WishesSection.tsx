@@ -146,7 +146,7 @@ export function WishesSection() {
                                         </span>
                                     </div>
                                     <p className="text-text-secondary font-serif leading-relaxed text-lg italic">
-                                        "{wish.message}"
+                                        &quot;{wish.message}&quot;
                                     </p>
                                 </Card>
                             </motion.div>
