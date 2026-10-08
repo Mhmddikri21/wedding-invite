@@ -1,21 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+html {
+  scroll-behavior: smooth;
+}
 
-  /* Gradient utilities */
+body {
+  background: #fbf8f4;
+  color: #4a4a46;
+}
+
+::selection {
+  background: #d9b9a6;
+  color: white;
+}
+
+@layer utilities {
   .bg-gradient-sunset {
-    background: linear-gradient(135deg, #F4C7BB 0%, #F5D5C5 50%, #E3EDF2 100%);
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,.5), transparent 28%),
+      linear-gradient(135deg, #d8b7a5 0%, #ead8ca 48%, #b9c8c4 100%);
   }
 
   .bg-gradient-ocean {
-    background: linear-gradient(135deg, #D8E8EC 0%, #A1BEC9 100%);
+    background: linear-gradient(135deg, #dfe9e6 0%, #aabdb9 100%);
   }
 
   .bg-gradient-peach {
-    background: linear-gradient(135deg, #F4E5CE 0%, #F4C7BB 100%);
+    background: linear-gradient(135deg, #ead8ca 0%, #d9b9a6 100%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .wedding-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
   }
 }
